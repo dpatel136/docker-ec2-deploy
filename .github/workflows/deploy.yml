@@ -18,7 +18,7 @@ jobs:
 
     - name: Save Docker image
       run: |
-        docker save mywebapp1:latest -o mywebapp1.tar
+        docker save mywebapp2:latest -o mywebapp2.tar
         chmod 644 mywebapp1.tar
 
     - name: Copy image to EC2
@@ -37,7 +37,7 @@ jobs:
         username: ${{ secrets.EC2_USER }}
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
-          docker load -i ~/mywebapp1.tar
-          docker stop mywebapp1 || true
-          docker rm mywebapp1 || true
-          docker run -d --name mywebapp1 -p 8086:80 mywebapp1:latest
+          docker load -i ~/mywebapp2.tar
+          docker stop mywebapp2 || true
+          docker rm mywebapp2 || true
+          docker run -d --name mywebapp2 -p 8086:80 mywebapp2:latest
