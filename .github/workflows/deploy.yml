@@ -19,6 +19,7 @@ jobs:
     - name: Save Docker image
       run: |
         docker save mywebapp:latest -o mywebapp.tar
+        chmod 644 mywebapp.tar
 
     - name: Copy image to EC2
       uses: appleboy/scp-action@v0.1.7
