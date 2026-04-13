@@ -14,7 +14,7 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t mywebapp1:latest .
+        docker build -t mywebapp2:latest .
 
     - name: Save Docker image
       run: |
