@@ -2,7 +2,7 @@ name: Deploy Docker WebApp to EC2
 
 on:
   push:
-    branches: [ "main" ]   ा
+    branches: [ "main" ]   # यहाँ कोई extra character नहीं होना चाहिए
 
 jobs:
   deploy:
