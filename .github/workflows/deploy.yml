@@ -29,7 +29,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           port: 22
           source: "mywebapp.tar"
-          target: "/home/ubuntu/"
+          target: "/home/ec2-user/"
 
       - name: Run Docker container on EC2
         uses: appleboy/ssh-action@v0.1.7
